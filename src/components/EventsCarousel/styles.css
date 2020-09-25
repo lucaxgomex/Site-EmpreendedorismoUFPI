@@ -1,0 +1,37 @@
+section.events {
+  width: 100vw;
+  padding: 80px 0;
+}
+
+.section-events-carousel-title {
+  width: 36%;
+  background-color: #FBC531;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-events-carousel-title h2 {
+  font-size: 32px;
+  padding: 18px;
+  text-align: center;
+}
+
+.section-events-carousel {
+  width: 90%;
+  padding: 40px 0;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: #ECECEC;
+}
+
+.carousel-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+

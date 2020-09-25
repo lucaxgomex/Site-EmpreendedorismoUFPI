@@ -1,0 +1,32 @@
+#section {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+#container-logo-initial {
+    width: 20vw;
+    height: 20vw;
+}
+
+#text-title-initial {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+}
+
+#text-initial {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+}

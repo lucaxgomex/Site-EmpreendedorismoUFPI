@@ -1,0 +1,60 @@
+section.our-team {
+  width: 100vw;
+  padding: 80px 0;
+}
+
+.section-our-team {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #ECECEC;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.section-our-team-title {
+  width: 36%;
+  background-color: #FBC531;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-our-team-title h2 {
+  font-size: 32px;
+  padding: 18px;
+  text-align: center;
+}
+
+.section-our-team-wrapper {
+  width: 20%;
+  margin-top: 20px;
+  padding: 8px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.section-our-team-wrapper img {
+  margin-bottom: 16px;
+}
+
+.section-our-team-wrapper:nth-of-type(4) img {
+  height: 242px;
+}
+
+.text-teammate-wrapper h3{
+  font-size: 28px;
+}
+
+.text-teammate-wrapper p.name-teammate-wrapper{
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.text-teammate-wrapper p {
+  font-size: 14px;
+}

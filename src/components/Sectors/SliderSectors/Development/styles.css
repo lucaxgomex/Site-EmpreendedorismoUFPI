@@ -1,0 +1,36 @@
+.clear {
+  clear: both;
+}
+
+.development {
+  width: 90%;
+  float: right;
+  display: flex;
+}
+
+.img-development {
+  width: 50%;
+}
+
+.img-development img {
+  transform: rotateY(180deg);
+  width: 100%;
+}
+
+.text-development {
+  width: 50%;
+  margin-top: 30px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-development h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.text-development p {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}

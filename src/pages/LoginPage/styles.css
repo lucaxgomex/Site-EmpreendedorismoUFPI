@@ -1,0 +1,64 @@
+
+#section-login {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    padding-top: 10vh;
+}
+
+#container-transform {
+    width: 40vw;
+    height: 100vh;
+    background-color: #FBC531;
+    transform: rotate(-20deg);
+    z-index: 0;
+    margin-top: -140px;
+}
+
+#container-form-login {
+    display: flex;
+    width: 40vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#container-complete-transform {
+    display: flex;
+    width: 51vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBC531;
+    z-index: 1;
+    margin-left: -415px;
+}
+
+#logo-login {
+    width: 25vw;
+    height: 25vw;
+    background-image: url('../../imgs/logo-azul.png');
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 25vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF8F8;
+    border-radius: 10px;
+}
+
+#text-entrar {
+    color: #000000;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+}

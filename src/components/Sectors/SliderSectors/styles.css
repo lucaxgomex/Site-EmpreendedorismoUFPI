@@ -1,0 +1,18 @@
+.sectors .slick-next {
+  margin-right: 80px;
+  width: 100px;
+  height: 100px;
+  filter: invert(100%);
+}
+
+.sectors .slick-prev {
+  margin-left: 40px;
+  width: 100px;
+  height: 100px;
+  filter: invert(100%);
+}
+
+.sectors .slick-disabled {
+  transition: 0.3s;
+  opacity: 0;
+}

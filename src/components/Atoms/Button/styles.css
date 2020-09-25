@@ -1,0 +1,19 @@
+#container-main-button {
+    display: flex;
+    height: 6vh;
+    background-color: #FBC531;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+
+    color: #000000;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+
+    box-shadow: 0px 3px rgba(000, 000, 000, 0.3);
+}

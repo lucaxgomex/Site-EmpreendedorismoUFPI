@@ -1,0 +1,31 @@
+.financial-market {
+  width: 90%;
+  display: flex;
+}
+
+.img-financial-market {
+  width: 50%;
+}
+
+.img-financial-market img {
+  width: 100%;
+}
+
+.text-financial-market {
+  width: 50%;
+  margin-top: 30px;
+  margin-left: -80px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-financial-market h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.text-financial-market p {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
