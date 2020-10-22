@@ -8,7 +8,7 @@ function Button (props) {
     };
 
 
-    if ((props.type) == 'submit') {
+    if ((props.type) === 'submit') {
         return (
             <button
                 type="submit"
@@ -25,7 +25,7 @@ function Button (props) {
                 style={style}
                 onClick={props.onClick}
             >
-                {props.content}
+                <span>{props.content}</span>
             </div>
         )
     }

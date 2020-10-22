@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
+import { render, cleanup } from '@testing-library/react';
 import { Form } from '@unform/web';
+import api from '../../configs/apiConfig';
+import { useHistory } from "react-router-dom";
 import * as Yup from 'yup';
-import { parse, isDate } from 'date-fns';
 
 import Header from '../../components/Header';
 import Button from '../../components/Atoms/Button';
 import FormInput from '../../components/Atoms/FormInput';
 import LogoLiga from '../../imgs/logo-azul.png';
+
+import Succesfuly from '../../imgs/icons/success.png';
+
 import './styles.css';
 
+
 function RegisterPage() {
+  const history = useHistory();
+
   const [name, setName] = useState('');
-  const [date, setDate] = useState('');
-  const [phone, setPhone] = useState('');
-  const [course, setCourse] = useState('');
-  const [job, setJob] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const firstFormData = {
-    name,
-    date,
-    phone,
-    course,
-    job
-  };
+  const [date_of_birth, setDateOfBirth] = useState('');
+  const [phone, setPhone] = useState('');
+  const [course, setCourse] = useState('');
+  const [occupation, setOccupation] = useState('');
 
   function changeForm() {
     const first_form = document.getElementById('first-form');
@@ -42,18 +42,27 @@ function RegisterPage() {
     second_form.style.display = 'none';
   }
 
-  function parsedDateString(value, originalValue) {
-    const parsedDate = isDate(originalValue)
-      ? originalValue
-      : parse(originalValue, "yyyy-MM-dd", new Date());
+  function hideForm() {
+    const second_form = document.getElementById('second-form');
 
-    return parsedDate;
-  } 
+    second_form.style.display = 'none';
+  }
 
   async function handleSubmitForm(secondFormdata) {
-    const data = Object.assign(firstFormData,secondFormdata)
+    const { email, password } = secondFormdata;
+
+    const data = {
+      name,
+      email,
+      password,
+      date_of_birth,
+      phone,
+      course,
+      occupation
+    }
+
     const today = new Date();
-    
+
     try {
       const schema = Yup.object().shape({
         name: Yup.string().required('O nome é obrigatório'),
@@ -62,24 +71,61 @@ function RegisterPage() {
                   .required('O e-mail é obrigatório'),
         phone: Yup.string().required('Número de telefone é obrigatório'),
         password: Yup.string()
-                     .min(8, 'A senha deve ter no mínimo 8 caracteres')
-                     .required('A senha é obrigatória'),
-        date: Yup.date().transform(parsedDateString).max(today),
-        
-      })
+                      .min(8, 'A senha deve ter no mínimo 8 caracteres')
+                      .required('A senha é obrigatória'),
+        date_of_birth: Yup.date().max(today).typeError('Você não preencheu o campo \'Data de Nascimento\' corretamente'),
+        course: Yup.string(),
+        occupation: Yup.string(),
 
+        
+      });
+      
       await schema.validate(data, {
         abortEarly: false,
       });
+      
+      await api.post('auth/register', {
+        name,
+        email,
+        password,
+        date_of_birth,
+        phone,
+        course,
+        occupation,
+        "is_superuser": false,
+        "is_active": true,
+        "user_type": "1"
+      });
 
-      document.location.reload();
+      hideForm()
+
+      render(
+        <div className="succesfuly-signin">
+          <img src={Succesfuly} alt="success" />
+          <span className="succesfuly-message">Cadastrado realizado com sucesso!</span>
+        </div>
+      )
+       
+      setTimeout(() => (cleanup(), history.push('/login')), 3000);
 
     } catch(err) {
       if (err instanceof Yup.ValidationError) {
-        console.log(err);
+        const listErrors = err.errors
+
+        render(
+          <div className="error-message-container">
+            {listErrors.map(messageError => <div className="error-message">{messageError}</div>)}
+          </div>
+        ) 
       }
-    }
+
+      const messages = document.getElementsByClassName('error-message');
+      
+      setTimeout(() => Object.values(messages)
+                            .forEach((message) => message.style.display="none"), 3600);
+      }
   }
+
 
   
   return (
@@ -98,7 +144,6 @@ function RegisterPage() {
 
             <FormInput 
               name="name"
-              id="name"
               width={22} 
               widthFlag={28}
               title={"Nome Completo"} 
@@ -114,9 +159,9 @@ function RegisterPage() {
               width={22} 
               widthFlag={34} 
               required={true}
-              placeHolder={'dd/mm/aaaa...'}
-              value={date}
-              onChange={(e) => { setDate(e.target.value) }}
+              type="date"
+              value={date_of_birth}
+              onChange={(e) => { setDateOfBirth(e.target.value) }}
             />
             
             <FormInput 
@@ -146,8 +191,8 @@ function RegisterPage() {
               width={22} 
               widthFlag={16}
               placeHolder={'Seu emprego...'}
-              value={job}
-              onChange={(e) => { setJob(e.target.value) }}
+              value={occupation}
+              onChange={(e) => { setOccupation(e.target.value) }}
             />
 
             <Button width={14} content={'Próximo'} onClick={changeForm} />
@@ -161,6 +206,8 @@ function RegisterPage() {
             <div className="title-form">
               <i onClick={backToFirstForm} className="fas fa-arrow-left"></i>
               <span className="text-signin">Cadastre-se</span>
+
+              <p>Agora só falta seu e-mail e senha!</p>
             </div>
 
             <FormInput

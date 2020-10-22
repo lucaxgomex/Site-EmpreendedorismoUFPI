@@ -7,7 +7,7 @@ function InitialAbout() {
     return (
         <section id="section">
             <div id="container-logo-initial">
-                <img src={logo} className="logoHeader"></img>
+                <img src={logo} className="logoHeader" alt="logo"></img>
             </div>
             <p id="text-title-initial">ATRÁS DE DESAFIOS</p><br></br>
             <span id="text-initial">SOMOS A PRIMEIRA  LIGA DE EMPREENDEDORISMO E MERCADO FINANCEIRO DO PIAUÍ,</span>

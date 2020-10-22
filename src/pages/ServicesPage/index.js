@@ -1,7 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
 
 function ServicesPage() {
+
   return (
     <div>
       <h2>Serviços</h2>
@@ -16,6 +18,8 @@ function ServicesPage() {
         <li><Link to='/admin'>Painel do admin</Link></li>
         <li><Link to='/usuario'>Painel do usuário</Link></li>
       </ul>
+
+        
     </div>
   );
 }

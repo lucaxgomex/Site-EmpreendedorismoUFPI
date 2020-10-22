@@ -10,7 +10,7 @@ class Header extends Component {
             <section id="section-header">
                 <header id="headerGeral">
                     <div id="container-logo">
-                        <img src={logo} className="logoHeader"></img>
+                        <img src={logo} className="logoHeader" alt="logo"></img>
                     </div>
                     <div id="buttons-links">
                         <ul id="list">

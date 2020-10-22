@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
 import EventsPage from './pages/EventsPage';
 import LoginPage from './pages/LoginPage';
+import PasswordRecovery from './pages/LoginPage/PasswordRecovery';
 import RegisterPage from './pages/RegisterPage';
 import AdminPanel from './pages/AdminPanel';
 import UserPanel from './pages/UserPanel';
@@ -21,6 +22,7 @@ export default function Routes() {
                 <Route path='/servicos' component={ServicesPage}/>
                 <Route path='/eventos' component={EventsPage}/>
                 <Route path='/login' component={LoginPage}/>
+                <Route path='/recuperar-senha' component={PasswordRecovery}/>
                 <Route path='/cadastro' component={RegisterPage}/>
                 <Route path='/admin' component={AdminPanel}/>
                 <Route path='/usuario' component={UserPanel}/>
