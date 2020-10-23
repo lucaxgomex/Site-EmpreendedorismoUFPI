@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Form } from '@unform/web';
+import AuthContext from '../../contexts/auth';
 
 import Header from '../../components/Header';
 import Button from '../../components/Atoms/Button';
@@ -13,6 +14,12 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const { signed, user, signIn } = useContext(AuthContext);
+
+  function handleSubmitLogin() {
+    signIn(email, password);
+  }
+
   return (
     <>
       <Header />
@@ -21,7 +28,9 @@ function LoginPage() {
           <div id="form-login">
             <span id="text-entrar">Entrar</span>
 
-            <Form>
+            <Form
+              onSubmit={handleSubmitLogin}
+            >
               <FormInput
                 name="userEmail"
                 width={20}
@@ -46,7 +55,7 @@ function LoginPage() {
                 onChange={(e) => { setPassword(e.target.value) }}
               />
               
-              <Button width={15} content={'Entrar'} type="submit"></Button>
+              <Button width={15} content={'Entrar'} type="submit" ></Button>
             </Form>
             
             <Link to="/recuperar-senha" className="forgot-password">Esqueceu a senha?</Link>
