@@ -3,8 +3,9 @@
     margin-left: 2vw;
     margin-top: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: space-between;
+    
     padding: 0px 0px 0px 0px;
 }
 
