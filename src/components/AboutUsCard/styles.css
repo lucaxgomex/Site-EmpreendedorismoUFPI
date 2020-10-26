@@ -59,12 +59,13 @@
     background: #EDEDED;
     border-radius: 10px;
     padding: 18px;
-
+    margin-bottom: 0px;
     
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
     line-height: 45px;
+    color: black;
 }
 
