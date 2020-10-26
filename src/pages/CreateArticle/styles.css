@@ -1,0 +1,17 @@
+section#create-article {
+  width: 100%;
+  height: 100vh;
+  background-color: #FAF8F8;
+}
+
+.create-article-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.create-article-title {
+  padding: 20px 0;
+}
+

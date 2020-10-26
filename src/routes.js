@@ -11,6 +11,7 @@ import PasswordRecovery from './pages/LoginPage/PasswordRecovery';
 import RegisterPage from './pages/RegisterPage';
 import AdminPanel from './pages/AdminPanel';
 import UserPanel from './pages/UserPanel';
+import CreateArticle from './pages/CreateArticle';
 
 export default function Routes() {
     return (
@@ -26,6 +27,7 @@ export default function Routes() {
                 <Route path='/cadastro' component={RegisterPage}/>
                 <Route path='/admin' component={AdminPanel}/>
                 <Route path='/usuario' component={UserPanel}/>
+                <Route path='/create-article' component={CreateArticle}/>
             </Switch>
         </BrowserRouter>
     )

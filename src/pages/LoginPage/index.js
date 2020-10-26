@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Form } from '@unform/web';
 import AuthContext from '../../contexts/auth';
 
@@ -14,11 +14,20 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const history = useHistory();
+
   const { signed, user, signIn } = useContext(AuthContext);
 
   function handleSubmitLogin() {
     signIn(email, password);
+    console.log(signed)
   }
+
+  // setTimeout(() => {
+  //   if (signed) {
+  //     history.push('/');
+  //   }
+  // }, 2000);
 
   return (
     <>
