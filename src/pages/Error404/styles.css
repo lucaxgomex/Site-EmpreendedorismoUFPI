@@ -1,4 +1,4 @@
-#pagina-geral {
+#body-error-page {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +7,7 @@
     height: 100vh;
 }
 
-#pagina-geral h1 {
+#body-error-page h1 {
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -18,7 +18,7 @@
     color: #313A8A;
 }
 
-#pagina-geral img {
+#body-error-page img {
     margin-left: 45vw;
     margin-right: 45vw;
     width: 150px;
