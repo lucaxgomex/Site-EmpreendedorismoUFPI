@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { Form } from '@unform/web';
-import api from '../../configs/apiConfig';
+import axios from '../../configs/apiConfig';
 import { useHistory } from "react-router-dom";
 import * as Yup from 'yup';
 
@@ -84,7 +84,7 @@ function RegisterPage() {
         abortEarly: false,
       });
       
-      await api.post('auth/register', {
+      await axios.post('auth/register', {
         name,
         email,
         password,

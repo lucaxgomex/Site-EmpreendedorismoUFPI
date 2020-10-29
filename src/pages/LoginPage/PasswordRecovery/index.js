@@ -15,7 +15,7 @@ import Succesfuly from '../../../imgs/icons/success.png';
 import './styles.css';
 
 
-function RegisterPage() {
+function PasswordRecovery() {
   const history = useHistory();
 
   const [email, setEmail] = useState('');
@@ -72,4 +72,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default PasswordRecovery;

@@ -1,7 +1,10 @@
-import React, { useState, useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { Form } from '@unform/web';
-import AuthContext from '../../contexts/auth';
+import axios from '../../configs/apiConfig';
+
+import { Auth } from '../../store/reducers/auth/actions';
 
 import Header from '../../components/Header';
 import Button from '../../components/Atoms/Button';
@@ -10,77 +13,87 @@ import LogoLiga from '../../imgs/logo-azul.png';
 
 import './styles.css';
 
-function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const history = useHistory();
-
-  const { signed, user, signIn } = useContext(AuthContext);
-
-  function handleSubmitLogin() {
-    signIn(email, password);
-    console.log(signed)
+class LoginPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+    }
   }
 
-  // setTimeout(() => {
-  //   if (signed) {
-  //     history.push('/');
-  //   }
-  // }, 2000);
+  login = async() => {
+    const { dispatch } = this.props;
 
-  return (
-    <>
-      <Header />
-      <section id="section-login">
-        <div id="container-form-login">
-          <div id="form-login">
-            <span id="text-entrar">Entrar</span>
+    axios.post('/auth/login', this.state).then(response => {
+      dispatch(Auth(response.data));
+      alert("Logado");
+    })
+      .catch(() => {
+        const errorBox = document.getElementById('error-message-login');
+        errorBox.style.display = 'block';
+        errorBox.innerHTML = `<span>E-mail ou senha incorreta, tente novamente.</span>`
+      });
+  }
 
-            <Form
-              onSubmit={handleSubmitLogin}
-            >
-              <FormInput
-                name="userEmail"
-                width={20}
-                widthFlag={12}
-                title={'E-mail'}
-                value={email}
-                placeHolder={'seuemail@com.br'}
-                required={true} 
-                type={'email'}
-                onChange={(e) => { setEmail(e.target.value) }}
-              />
+  render() {
+    return (
+      <>
+        <Header />
+        <section id="section-login">
+          <div id="container-form-login">
+            <div id="form-login">
+              <span id="text-entrar">Entrar</span>
 
-              <FormInput
-                name="passwordLogin"
-                width={20}
-                widthFlag={12}
-                title={'Senha'}
-                value={password}
-                placeHolder={'*****'}
-                required={true}
-                type={'password'}
-                onChange={(e) => { setPassword(e.target.value) }}
-              />
+              <Form
+                onSubmit={this.login}
+              >
+                <FormInput
+                  name="email"
+                  width={20}
+                  widthFlag={12}
+                  title={'E-mail'}
+                  placeHolder={'seuemail@com.br'}
+                  required={true} 
+                  type={'email'}
+                  onChange={e => { this.setState({ email: e.target.value }) }}
+                  value={this.state.email}
+                />
+
+                <FormInput
+                  name="password"
+                  width={20}
+                  widthFlag={12}
+                  title={'Senha'}
+                  value={this.state.password}
+                  placeHolder={'*****'}
+                  required={true}
+                  type={'password'}
+                  onChange={e => { this.setState({ password: e.target.value }) }}
+                />
+
+                <div id="error-message-login">
+                </div>
+                
+                <Button width={15} content={'Entrar'} type="submit" ></Button>
+              </Form>
+
               
-              <Button width={15} content={'Entrar'} type="submit" ></Button>
-            </Form>
-            
-            <Link to="/recuperar-senha" className="forgot-password">Esqueceu a senha?</Link>
+              <Link to="/recuperar-senha" className="forgot-password">Esqueceu a senha?</Link>
 
-            <div className="create-account-wrapper">
-              <span>Você ainda não tem sua conta?</span>
-              <Button width={6} content={'Cadastre-se'} />
+              <div className="create-account-wrapper">
+                <span>Você ainda não tem sua conta?</span>
+                <Button width={6} content={'Cadastre-se'} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="logo-liga-login">
-            <img src={LogoLiga} alt="logo-liga" />
-        </div>
-      </section>
-    </>
-  )
+          <div className="logo-liga-login">
+              <img src={LogoLiga} alt="logo-liga" />
+          </div>
+        </section>
+      </>
+    );
+  }
 }
 
-export default LoginPage;
+export default connect()(LoginPage);

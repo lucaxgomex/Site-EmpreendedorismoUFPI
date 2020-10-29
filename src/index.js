@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './routes';
-import { AuthProvider } from './contexts/auth';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './store';
 
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthProvider>
-      <Routes />
-    </AuthProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Routes />
+      </PersistGate>
+      {/* <Routes /> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
