@@ -19,7 +19,7 @@ export default function HeaderDashboard() {
               className="search-bar"
               placeholder="Pesquisar artigos ou notícias..."
             />
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </div>
         </div>
         <div className="header-dashboard-buttons">

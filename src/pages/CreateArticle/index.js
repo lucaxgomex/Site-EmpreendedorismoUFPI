@@ -1,34 +1,30 @@
-import React, { useState } from 'react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import CKEditor from '@ckeditor/ckeditor5-react';
-import { Form } from '@unform/web';
+import React from 'react';
 
 import HeaderDashboard from '../../components/HeaderDashboard';
-import FormInput from '../../components/Atoms/FormInput';
+import GeneralInput from '../../components/Atoms/Generalnput';
+import InsertImage from '../../components/InsertImage';
+import ActionButton from '../../components/Atoms/ActionButton'
 
 import './styles.css';
 
 function CreateArticle() {
-  const [title, setTitle] = useState('');
-
-  
   return (
-    <>
-      <HeaderDashboard />
-      <section id="create-article">
-
-        <div className="create-article-container">
-
-          <div className="create-article-title">
-            
-          </div>
-          <CKEditor
-            editor={ClassicEditor}
-          />
+    <section id="create-news">
+        <HeaderDashboard />
+        <div id="create-news-body">
+            <div className="central create-article-central"> 
+                <GeneralInput text="Titulo" type="inputText"/>
+                <InsertImage/>
+                <GeneralInput text="Conteúdo" type="inputEditor" />
+                
+                <div className="buttons-create-news">
+                    <ActionButton content="Cancelar" color="red" className="action-button"/>
+                    <ActionButton content="Enviar" color="blue" className="action-button"/>
+                </div>
+            </div>
         </div>
-      </section>
-    </>
-  );
+    </section>
+);
 }
 
 export default CreateArticle;

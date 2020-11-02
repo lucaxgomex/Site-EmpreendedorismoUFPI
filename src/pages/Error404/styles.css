@@ -1,0 +1,27 @@
+#body-error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E5E5E5;
+    width: 100vw;
+    height: 100vh;
+}
+
+#body-error-page h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 120px;
+
+    text-align: center;
+    color: #313A8A;
+}
+
+#body-error-page img {
+    margin-left: 45vw;
+    margin-right: 45vw;
+    width: 150px;
+    height: 143.42px;
+    margin-bottom: 80px;
+}
