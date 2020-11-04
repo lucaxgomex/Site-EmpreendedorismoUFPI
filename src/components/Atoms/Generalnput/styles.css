@@ -1,4 +1,3 @@
-
 #input-body input{
     width: 100%;
     height: 50px;
@@ -19,9 +18,25 @@
 }
 
 .ck-editor__editable {
-    padding: 20px;
     min-height: 200px;
 }
+
+.ck-editor__editable p,
+.ck-editor__editable h1,
+.ck-editor__editable ul li {
+    font-family: Poppins;
+    color: #000;
+}
+
+.ck-editor__editable ul {
+    padding-left: 30px;
+}
+
+.ck-editor__editable ul li,
+.ck-editor__editable p {
+    font-size: 14px;
+}
+
 
 
 #input-body .label-body{

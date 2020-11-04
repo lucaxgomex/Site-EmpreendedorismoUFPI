@@ -17,6 +17,7 @@ export default function ActionButton({ content, color, onClick }) {
       <button
         id="action-button"
         style={styleRed}
+        onClick={onClick}
       >
         {content}
       </button>

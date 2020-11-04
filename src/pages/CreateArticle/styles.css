@@ -19,6 +19,10 @@ section#create-news {
   height: 100%;
 }
 
+#create-news-body .central .create-article-central {
+  color: #000;
+}
+
 #create-news-body .central .buttons-create-news {
   display: flex;
   justify-content: space-between;
