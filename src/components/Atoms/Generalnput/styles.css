@@ -1,15 +1,42 @@
-#input-body {
-    
-}
-
 #input-body input{
     width: 100%;
-    height: 35px;
+    height: 50px;
 
     border-radius: 8px;
     border: 2px solid #00183C;
     padding-left: 10px;
 }
+
+#input-body-editor {
+    width: 100%;
+    padding: 14px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #00183C;
+    font-size: medium;
+}
+
+.ck-editor__editable {
+    min-height: 200px;
+}
+
+.ck-editor__editable p,
+.ck-editor__editable h1,
+.ck-editor__editable ul li {
+    font-family: Poppins;
+    color: #000;
+}
+
+.ck-editor__editable ul {
+    padding-left: 30px;
+}
+
+.ck-editor__editable ul li,
+.ck-editor__editable p {
+    font-size: 14px;
+}
+
 
 
 #input-body .label-body{
@@ -24,7 +51,7 @@
     align-items: center;
 
     position: relative;
-    top: -45px;
+    top: -64px;
     z-index: 2;
 }
 
@@ -41,8 +68,41 @@
     color: #00183C;
 }
 
+#input-body-editor .label-body {
+    width: 25%;
+    max-width: 200px;
+    margin-left: 2vw;
+
+    background: #FBC531;
+    border-radius: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 544px;
+    z-index: 2;
+}
+
+.create-article-central #input-body-editor .label-body {
+    top: 466px;
+}
+
+#input-body-editor .label-body label {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+
+    margin-left: 8px;
+    margin-right: 8px;
+
+    color: #00183C;
+}
+
 #input-body .input-area:focus + .label-body {
     position: relative;
-    top: -56px;
+    top: -70px;
     z-index: 2;
 }

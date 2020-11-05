@@ -2,27 +2,38 @@ import React from 'react';
 import axios from '../../configs/apiConfig';
 import { connect } from 'react-redux';
 
+import { store } from '../../store';
+
+import { Article } from '../../store/reducers/article/actions';
+
 import HeaderDashboard from '../../components/HeaderDashboard';
 import GeneralInput from '../../components/Atoms/Generalnput';
 import InsertImage from '../../components/InsertImage';
-import ActionButton from '../../components/Atoms/ActionButton';
+import ActionButton from '../../components/Atoms/ActionButton'
 
-import "./styles.css";
+import './styles.css';
 
-class CreateNews extends React.Component {
+class CreateArticle extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
             title: '',
-            subtitle: '',
-            content: ''
+            content: '',
         }
     }
 
     handleCKEditorState = (event, editor) => {
         const data = editor.getData();
         this.setState({ content: data})
+        console.log(this.state.content)
+    }
+
+    handleCreateArticleSubmit = async() => {
+        const { dispatch } = this.props;
+
+        dispatch(Article(this.state));
+        alert("Artigo criado com sucesso!");
     }
 
     render() {
@@ -30,29 +41,32 @@ class CreateNews extends React.Component {
             <section id="create-news">
                 <HeaderDashboard />
                 <div id="create-news-body">
-                    <div className="central"> 
+                    <div className="central create-article-central"> 
                         <GeneralInput
                             text="Titulo"
                             type="inputText"
                             value={this.state.title}
                             onChange={(e) => this.setState({ title: e.target.value })}
                         />
-                        <GeneralInput
-                            text="Subtitulo"
-                            type="inputText"
-                            value={this.state.subtitle}
-                            onChange={(e) => this.setState({ subtitle: e.target.value })}    
-                        />
                         <InsertImage/>
                         <GeneralInput
                             text="Conteúdo"
-                            type="inputEditor" 
+                            type="inputEditor"
                             onChange={this.handleCKEditorState}
                         />
                         
                         <div className="buttons-create-news">
-                            <ActionButton content="Cancelar" color="red" className="action-button"/>
-                            <ActionButton content="Enviar" color="blue" className="action-button"/>
+                            <ActionButton
+                                content="Cancelar" 
+                                color="red"
+                                className="action-button"
+                            />
+                            <ActionButton
+                                content="Enviar"
+                                color="blue" 
+                                onClick={this.handleCreateArticleSubmit}
+                                className="action-button"
+                            />
                         </div>
                     </div>
                 </div>
@@ -61,5 +75,4 @@ class CreateNews extends React.Component {
     }
 }
 
-
-export default connect()(CreateNews);
+export default connect()(CreateArticle);
