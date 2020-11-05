@@ -1,0 +1,77 @@
+div.signin {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/img/background-signin.png');
+  background-size: 100% 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
+.section-signin {
+  width: 100%;
+  display: flex;
+}
+
+.container-form-signin {
+  display: flex;
+  width: 40vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-family: Poppins;
+}
+
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 20px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAF8F8;
+  border-radius: 10px;
+}
+
+span.text-signin {
+  color: #00183C;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.logo-liga {
+  width: 55%;
+}
+
+.logo-liga img {
+  width: 40%;
+  position: relative;
+  top: 26%;
+  left: 26%;
+}
+
+#container-main-button {
+  margin-top: 20px;
+}
+
+#second-form {
+  display: none;
+  position: absolute;
+  top: 35px;
+  z-index: 2;
+  text-align: center;
+}
+
+.title-form {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.title-form i{
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}

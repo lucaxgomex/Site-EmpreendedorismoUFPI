@@ -10,6 +10,8 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AdminPanel from './pages/AdminPanel';
 import UserPanel from './pages/UserPanel';
+import Error404 from './pages/Error404';
+import CreateNews from './pages/CreateNews';
 
 export default function Routes() {
     return (
@@ -24,6 +26,8 @@ export default function Routes() {
                 <Route path='/cadastro' component={RegisterPage}/>
                 <Route path='/admin' component={AdminPanel}/>
                 <Route path='/usuario' component={UserPanel}/>
+                <Route path='/error404' component={Error404}/>
+                <Route path='/news' component={CreateNews}/>
             </Switch>
         </BrowserRouter>
     )
