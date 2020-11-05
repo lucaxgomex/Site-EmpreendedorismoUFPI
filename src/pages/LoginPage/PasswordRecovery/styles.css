@@ -1,13 +1,13 @@
-div.signin {
+div.recovery-password {
   width: 100vw;
   height: 100vh;
-  background: url('../../assets/img/background-signin.png');
+  background: url('../../../assets/img/background-signin.png');
   background-size: 100% 100%;
   background-position: cover;
   background-repeat: no-repeat;
 }
 
-.section-signin {
+.section-recovery-password {
   width: 100%;
   display: flex;
 }
@@ -75,17 +75,19 @@ div.signin {
   transition: 0.3s;
 }
 
-.container-form-signin {
+.container-form-password-recovery {
   display: flex;
-  width: 40vw;
-  height: 100vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 40vw;
+  height: 100vh;
   z-index: 2;
   font-family: Poppins;
 }
 
-.form-signin {
+.form-password-recovery {
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -97,10 +99,27 @@ div.signin {
   border-radius: 10px;
 }
 
-span.text-signin {
+span.text-password-recovery {
   color: #00183C;
   font-size: 2.4rem;
   padding-bottom: 20px;
+}
+
+.recovery-text {
+  max-width: 70%;
+  font-size: 12px;
+  text-align: center;
+}
+
+.recovery-text span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.recovery-text p {
+  color: #000;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .logo-liga {
@@ -128,7 +147,7 @@ span.text-signin {
 
 .title-form {
   width: 100%;
-  padding-bottom: 2px;
+  padding-bottom: 30px;
 }
 
 .title-form i{
@@ -137,10 +156,4 @@ span.text-signin {
   position: absolute;
   top: 40px;
   left: 20px;
-}
-
-.title-form p {
-  font-size: 20px;
-  padding-top: 10px;
-  text-align: center;
 }

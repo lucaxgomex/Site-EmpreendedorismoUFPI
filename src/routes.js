@@ -7,11 +7,14 @@ import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
 import EventsPage from './pages/EventsPage';
 import LoginPage from './pages/LoginPage';
+import PasswordRecovery from './pages/LoginPage/PasswordRecovery';
 import RegisterPage from './pages/RegisterPage';
 import AdminPanel from './pages/AdminPanel';
 import UserPanel from './pages/UserPanel';
+import CreateArticle from './pages/CreateArticle';
 import Error404 from './pages/Error404';
 import CreateNews from './pages/CreateNews';
+import ArticlePage from './pages/ArticlePage';
 
 export default function Routes() {
     return (
@@ -23,11 +26,14 @@ export default function Routes() {
                 <Route path='/servicos' component={ServicesPage}/>
                 <Route path='/eventos' component={EventsPage}/>
                 <Route path='/login' component={LoginPage}/>
+                <Route path='/recuperar-senha' component={PasswordRecovery}/>
                 <Route path='/cadastro' component={RegisterPage}/>
                 <Route path='/admin' component={AdminPanel}/>
                 <Route path='/usuario' component={UserPanel}/>
+                <Route path='/create-article' component={CreateArticle}/>
                 <Route path='/error404' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
+                <Route path='/article' component={ArticlePage}/>
             </Switch>
         </BrowserRouter>
     )
