@@ -1,0 +1,44 @@
+section#article-page {
+  width: 100%;
+  height: 100%;
+
+  background-color: #E5E5E5;
+}
+
+section#article-page #container-article {
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px 0;
+  height: 100%;
+}
+
+
+#container-article #title-article h1{
+  font-family: Poppins;
+  font-size: 48px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#container-article #content-article h1,
+#container-article #content-article p,
+#container-article #content-article ul li {
+  font-family: Poppins;
+  color: #000;
+}
+
+#container-article #content-article {
+  padding: 20px 0;
+  text-align: justify;
+}
+
+#container-article #content-article p {
+  font-size: 20px;
+  font-weight: normal;
+
+}
+
+#container-article #content-article ul li {
+  font-size: 23px;
+  padding-bottom: 18px;
+}

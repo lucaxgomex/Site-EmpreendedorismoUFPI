@@ -1,0 +1,159 @@
+div.recovery-password {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/background-signin.png');
+  background-size: 100% 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
+.section-recovery-password {
+  width: 100%;
+  display: flex;
+}
+
+.succesfuly-signin {
+  z-index: 999;
+  position: absolute;
+  top: 36%;
+  right: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 40vw;
+  padding: 30px 10px;
+  border-radius: 10px;
+  background-color: #FAF8F8;
+
+  text-align: center;
+}
+
+.succesfuly-signin > img {
+  width: 61px;
+  height: 66px;
+}
+
+.succesfuly-signin span {
+  width: 100%;
+  padding-top: 20px;
+  font-size: 2rem;
+  color: #00183C;
+  font-family: Poppins;
+}
+
+.error-message-container {
+  width: 100%;
+  max-width: 300px;
+  max-height: 100vh;
+
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+
+.error-message {
+  max-width: 320px;
+  padding: 20px 10px;
+  display: block;
+  margin-bottom: 8px;
+
+  background-color: red;
+  border-bottom: 5px solid #ffff;
+
+  text-align: center;
+  font-family: Poppins;
+  color: white;
+  
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  
+  transition: 0.3s;
+}
+
+.container-form-password-recovery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 40vw;
+  height: 100vh;
+  z-index: 2;
+  font-family: Poppins;
+}
+
+.form-password-recovery {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 20px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAF8F8;
+  border-radius: 10px;
+}
+
+span.text-password-recovery {
+  color: #00183C;
+  font-size: 2.4rem;
+  padding-bottom: 20px;
+}
+
+.recovery-text {
+  max-width: 70%;
+  font-size: 12px;
+  text-align: center;
+}
+
+.recovery-text span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.recovery-text p {
+  color: #000;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.logo-liga {
+  width: 55%;
+}
+
+.logo-liga img {
+  width: 40%;
+  position: relative;
+  top: 26%;
+  left: 26%;
+}
+
+#container-main-button {
+  margin: 20px 0;
+}
+
+#second-form {
+  display: none;
+  position: absolute;
+  top: 35px;
+  z-index: 2;
+  text-align: center;
+}
+
+.title-form {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.title-form i{
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
