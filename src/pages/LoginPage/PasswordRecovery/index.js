@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { Form } from '@unform/web';
-import api from '../../../configs/apiConfig';
-import { useHistory } from "react-router-dom";
-import * as Yup from 'yup';
 
 import Header from '../../../components/Header';
 import Button from '../../../components/Atoms/Button';
@@ -10,23 +7,19 @@ import FormInput from '../../../components/Atoms/FormInput';
 import LogoLiga from '../../../imgs/logo-azul.png';
 
 import Shield from '../../../assets/icons/mdi_shield-check.png';
-import Succesfuly from '../../../imgs/icons/success.png';
 
 import './styles.css';
 
 
 function PasswordRecovery() {
-  const history = useHistory();
 
   const [email, setEmail] = useState('');
 
-  function hideForm() {
-    const second_form = document.getElementById('second-form');
+  // function hideForm() {
+  //   const second_form = document.getElementById('second-form');
 
-    second_form.style.display = 'none';
-  }
-
-  
+  //   second_form.style.display = 'none';
+  // }
   
   return (
     <div className="recovery-password">
