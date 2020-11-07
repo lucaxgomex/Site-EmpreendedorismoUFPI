@@ -27,7 +27,6 @@ class CreateArticle extends React.Component {
     handleCKEditorState = (event, editor) => {
         const data = editor.getData();
         this.setState({ content: data})
-        console.log(this.state.content)
     }
 
     handleCreateArticleSubmit = async() => {
@@ -44,7 +43,7 @@ class CreateArticle extends React.Component {
             });
 
             dispatch(Article(this.state));
-            alert("Artigo criado com sucesso!");
+            this.props.history.push('/article-preview');
         } catch (err) {
             err.errors.map(error => alert(error))
         }
@@ -70,7 +69,7 @@ class CreateArticle extends React.Component {
                             onChange={this.handleCKEditorState}
                         />
                         
-                        <div className="buttons-create-news">
+                        <div className="buttons-create-article">
                             <ActionButton
                                 content="Cancelar" 
                                 color="red"

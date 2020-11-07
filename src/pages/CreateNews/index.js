@@ -19,14 +19,17 @@ class CreateNews extends React.Component {
         this.state = {
             title: '',
             subtitle: '',
-            content: ''
+            content: '',
+            redirect: true,
         }
     }
+
 
     handleCreateNewsSubmit = async() => {
         const { dispatch } = this.props;
 
         try {
+
             const schema = Yup.object().shape({
                 title: Yup.string().required('É necessário digitar um título para a notícia.'),
                 subtitle: Yup.string().required('É necessário digitar um subtítulo para a notícia.'),

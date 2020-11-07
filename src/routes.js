@@ -14,7 +14,7 @@ import UserPanel from './pages/UserPanel';
 import CreateArticle from './pages/CreateArticle';
 import Error404 from './pages/Error404';
 import CreateNews from './pages/CreateNews';
-import ArticlePage from './pages/ArticlePage';
+import ArticlePreviewPage from './pages/ArticlePreviewPage';
 
 export default function Routes() {
     return (
@@ -33,7 +33,7 @@ export default function Routes() {
                 <Route path='/create-article' component={CreateArticle}/>
                 <Route path='/error404' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
-                <Route path='/article' component={ArticlePage}/>
+                <Route path='/article-preview' component={ArticlePreviewPage}/>
             </Switch>
         </BrowserRouter>
     )
