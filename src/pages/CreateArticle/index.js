@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from '../../configs/apiConfig';
+import * as Yup from 'yup';
 import { connect } from 'react-redux';
 
 import { store } from '../../store';
@@ -32,8 +33,22 @@ class CreateArticle extends React.Component {
     handleCreateArticleSubmit = async() => {
         const { dispatch } = this.props;
 
-        dispatch(Article(this.state));
-        alert("Artigo criado com sucesso!");
+        try {
+            const schema = Yup.object().shape({
+                title: Yup.string().required('É necessário digitar um título para o artigo.'),
+                content: Yup.string().required('O conteúdo do artigo não pode ser vazio.'),
+            });
+
+            await schema.validate(this.state, {
+                abortEarly: false,
+            });
+
+            dispatch(Article(this.state));
+            alert("Artigo criado com sucesso!");
+        } catch (err) {
+            err.errors.map(error => alert(error))
+        }
+
     }
 
     render() {
