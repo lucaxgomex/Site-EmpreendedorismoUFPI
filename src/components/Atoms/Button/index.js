@@ -20,13 +20,13 @@ function Button (props) {
         );
     } else {
         return (
-            <div 
+            <button 
                 id="container-main-button" 
                 style={style}
                 onClick={props.onClick}
             >
                 <span>{props.content}</span>
-            </div>
+            </button>
         )
     }
 }

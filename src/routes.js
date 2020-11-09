@@ -15,6 +15,7 @@ import CreateArticle from './pages/CreateArticle';
 import Error404 from './pages/Error404';
 import CreateNews from './pages/CreateNews';
 import ArticlePreviewPage from './pages/ArticlePreviewPage';
+import ProfileEditPage from './pages/ProfileEditPage';
 
 export default function Routes() {
     return (
@@ -30,10 +31,11 @@ export default function Routes() {
                 <Route path='/cadastro' component={RegisterPage}/>
                 <Route path='/admin' component={AdminPanel}/>
                 <Route path='/usuario' component={UserPanel}/>
+                <Route path='/editar-perfil' component={ProfileEditPage}/>
                 <Route path='/create-article' component={CreateArticle}/>
+                <Route path='/article-preview' component={ArticlePreviewPage}/>
                 <Route path='/error404' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
-                <Route path='/article-preview' component={ArticlePreviewPage}/>
             </Switch>
         </BrowserRouter>
     )
