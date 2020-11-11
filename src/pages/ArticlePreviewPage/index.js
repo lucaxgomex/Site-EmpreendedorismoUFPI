@@ -3,6 +3,7 @@ import { store } from '../../store';
 
 import HeaderDashboard from '../../components/HeaderDashboard';
 import ActionButton from '../../components/Atoms/ActionButton';
+import ConfirmationModal from '../../components/ConfirmationModal';
 
 import userPhoto from '../../imgs/kauezin.jpg';
 
@@ -46,12 +47,7 @@ function ArticlePreviewPage() {
               onClick={() => {}}
               className="action-button"
           />
-          <ActionButton
-              content="Confirmar"
-              color="blue" 
-              onClick={() => {}}
-              className="action-button"
-          />
+          <ConfirmationModal />
         </div>           
       </div>
 
