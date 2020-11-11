@@ -16,6 +16,7 @@ import Error404 from './pages/Error404';
 import CreateNews from './pages/CreateNews';
 import ArticlePreviewPage from './pages/ArticlePreviewPage';
 import ProfileEditPage from './pages/ProfileEditPage';
+import HomeUser from './pages/HomeUser';
 
 export default function Routes() {
     return (
@@ -36,6 +37,7 @@ export default function Routes() {
                 <Route path='/article-preview' component={ArticlePreviewPage}/>
                 <Route path='/error404' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
+                <Route path='/homeUser' component={HomeUser}/>
             </Switch>
         </BrowserRouter>
     )
