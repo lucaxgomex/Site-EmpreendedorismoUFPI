@@ -22,6 +22,7 @@ function Button (props) {
         return (
             <button 
                 id="container-main-button" 
+                type="button"
                 style={style}
                 onClick={props.onClick}
             >
