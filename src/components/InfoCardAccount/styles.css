@@ -1,0 +1,86 @@
+.info-card {
+    width: 50%;
+    height: 250px;
+    box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.50);
+    border-radius: 10px;
+    margin: 0 15px 0 15px;
+    background-color: #FAF8F8;
+}
+
+#my-data{
+    width: 100%;
+}
+
+#my-data img {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+}
+
+#my-data .data-with-image-my-data-card{
+    margin: 20px 65px 0px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#my-data .button-my-data-config {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#common .infos-common-account-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 60px 30px 0px;
+}
+
+#common .infos-common-account-card img{
+    width: 90px;
+    height: 60px;
+} 
+
+#common .button-common-account-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#common .final-common-account-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px 0px 0px 20px;
+}
+
+.info-card .body-info-card{
+    padding: 20px 15px 10px 15px;
+    font-family: Poppins;
+}
+
+.info-card .body-info-card h1{
+    font-size: 30px;
+    color: rgba(5, 0, 0, 0.3);
+}
+
+.info-card .body-info-card h2{
+    font-size: 35px;
+    color: rgba(5, 0, 0, 0.3);
+}
+
+.info-card .body-info-card p{
+    font-size: 20px;
+    color: rgba(5, 0, 0, 0.3);
+}
+
+.info-card .body-info-card strong{
+    font-size: 40px;
+}
+
+.info-card .body-info-card h3{
+    font-size: 30px;
+    color: rgba(5, 0, 0, 0.3);
+    margin-top: 20px;
+}
