@@ -3,9 +3,9 @@ import './styles.css';
 
 function GreenButton(props) {
   return (
-    <div id="green-button">
+    <button id="green-button">
         {props.children}
-    </div >
+    </button >
   );
 }
 

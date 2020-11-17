@@ -11,9 +11,10 @@ import './styles.css';
 function UserPanel() {
   return (
     <section id="profile-user-page">
-      <HeaderDashboard/>
+      <HeaderDashboard nameButton="Home"/>
       <div className="body-profile-user">
         <div className="info-cards-profile">
+
           <InfoCardAccount typeCard="my-data">
             <h1>Meus dados</h1>
             <div className="data-with-image-my-data-card">
@@ -29,24 +30,27 @@ function UserPanel() {
               </GreenButton>
             </div>
           </InfoCardAccount>
+
           <InfoCardAccount typeCard="common">
             <h1>Saldo</h1>
-            <div className="infos-common-account-card">
+            <div className="infos-common-card">
               <img src={coins}/>
               <strong>1M</strong>
             </div>
-            <div className="button-common-account-card">
+            <div className="button-common-card">
               <GreenButton >
                 <h1>Recarregar</h1>
               </GreenButton>
             </div>
           </InfoCardAccount>
-          <InfoCardAccount typeCard="common">
-            <div className="final-common-account-card">
+
+          <InfoCardAccount typeCard="common" >
+            <div className="general-common-account-card">
               <img src={password}/>
               <h3>Alterar Senha</h3>
             </div>
           </InfoCardAccount>
+
           <img src={logo} className="image-panel-user"/>
         </div>
       </div>

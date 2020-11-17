@@ -5,7 +5,7 @@ import ActionButton from '../Atoms/ActionButton';
 
 import './styles.css';
 
-export default function HeaderDashboard() {
+export default function HeaderDashboard(props) {
   return (
     <header id="header-dashboard">
       <div id="header-dashboard-container">
@@ -24,7 +24,7 @@ export default function HeaderDashboard() {
         </div>
         <div className="header-dashboard-buttons">
           <ActionButton
-            content="Perfil"
+            content={props.nameButton}
             color="blue"
             onClick={() => alert("Funcionado!")}
           />

@@ -33,7 +33,7 @@ class ProfileEditPage extends React.Component {
   render() {
     return (
       <section id="profile-edit">
-        <HeaderDashboard />
+        <HeaderDashboard nameButton="Home"/>
         <div className="container-form-edit-profile">
           <Form onSubmit={this.handleFormEditSubmit}>
   

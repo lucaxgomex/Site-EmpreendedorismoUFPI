@@ -56,7 +56,7 @@ class CreateNews extends React.Component {
     render() {
         return (
             <section id="create-news">
-                <HeaderDashboard />
+                <HeaderDashboard nameButton="Home"/>
                 <div id="create-news-body">
                     <div className="central"> 
                         <GeneralInput

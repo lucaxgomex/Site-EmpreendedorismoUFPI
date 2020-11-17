@@ -23,7 +23,7 @@ class PasswordChangePage extends React.Component {
   render() {
     return (
       <section id="password-change">
-        <HeaderDashboard />
+        <HeaderDashboard nameButton="Home"/>
 
         <div className="container-form-password-change">
           <div className="container-form-password-padlock">

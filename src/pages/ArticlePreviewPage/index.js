@@ -24,7 +24,7 @@ function ArticlePreviewPage() {
 
   return (
     <section id="article-page">
-      <HeaderDashboard />
+      <HeaderDashboard nameButton="Home"/>
     
       <div id="container-article">
         <div id="title-article">

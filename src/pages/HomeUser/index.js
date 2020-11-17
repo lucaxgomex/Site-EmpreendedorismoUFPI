@@ -7,7 +7,7 @@ import './styles.css';
 function HomeUser () {
     return (
         <section id="home-user-page">
-            <HeaderDashboard/>
+            <HeaderDashboard nameButton="Perfil"/>
             <div className="home-user-body">
 
             </div>
