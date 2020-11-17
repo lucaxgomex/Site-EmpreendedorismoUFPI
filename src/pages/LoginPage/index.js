@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Form } from '@unform/web';
-import axios from '../../configs/apiConfig';
 
-import { Auth } from '../../store/reducers/auth/actions';
+import loginService from '../../services/loginService';
 
 import Header from '../../components/Header';
 import Button from '../../components/Atoms/Button';
@@ -22,19 +21,12 @@ class LoginPage extends React.Component {
     }
   }
 
-  login = async() => {
+  login = () => {
+    const data = this.state;
     const { dispatch } = this.props;
 
-    axios.post('/auth/login', this.state).then(response => {
-      dispatch(Auth(response.data));
-      alert("Logado");
-    })
-      .catch(() => {
-        const errorBox = document.getElementById('error-message-login');
-        errorBox.style.display = 'block';
-        errorBox.innerHTML = `<span>E-mail ou senha incorreta, tente novamente.</span>`
-      });
-  }
+    loginService(data, dispatch);
+  };
 
   render() {
     return (

@@ -1,0 +1,38 @@
+section#profile-edit {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+  background-color: #ECECEC;
+}
+
+#profile-edit .container-form-edit-profile {
+  width: 40%;
+  padding: 20px 0;
+  margin: 80px auto 0 auto;
+
+  background-color: #FAF8F8;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-form-edit-profile form #container-main-button {
+  color: white;
+}
+
+.container-form-edit-profile form #profileImageInput {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.container-form-edit-profile form #container-main-button:first-of-type {
+  margin: 50px auto 20px auto;
+}
+
+.container-form-edit-profile form #container-main-button:last-of-type {
+  background-color: #EB5757;
+  margin: 0 auto;
+}

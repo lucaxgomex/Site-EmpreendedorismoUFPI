@@ -1,0 +1,52 @@
+.ReactModal__Content--after-open{
+  height: 96%;
+  inset: 20px;
+}
+
+.ReactModal__Content--after-open .modal-container-block i {
+  color: #000;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper h2 {
+  font-family: Poppins;
+  text-align: center;
+  padding: 30px 0;
+  max-width: 300px;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper .card {
+  width: 30%;
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: blue;
+  border-radius: 12px;
+}
+
+.ReactModal__Content--after-open .modal-container-block #container-input-formInput {
+  border: 2px solid #00183C !important;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper .buttons-modal {
+  width: 54%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper .buttons-modal button#action-button {
+  padding: 4px 30px;
+}

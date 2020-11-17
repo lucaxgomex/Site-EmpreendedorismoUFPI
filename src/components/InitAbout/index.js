@@ -5,7 +5,7 @@ import logo from "../../imgs/logo.png";
 
 function InitialAbout() {
     return (
-        <section id="section">
+        <section id="section-init-about">
             <div id="container-logo-initial">
                 <img src={logo} className="logoHeader"></img>
             </div>

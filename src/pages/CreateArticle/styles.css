@@ -23,10 +23,14 @@ section#create-news {
   color: #000;
 }
 
-#create-news-body .central .buttons-create-news {
+#create-news-body .central .buttons-create-article {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 20px 0;
+}
+
+#create-news-body .central .buttons-create-article button {
+  margin-left: 20px;
 }
 
 

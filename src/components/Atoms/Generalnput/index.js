@@ -6,7 +6,7 @@ import CKEditor from '@ckeditor/ckeditor5-react';
 import "./styles.css";
 
 function GeneralInput(props) {
-    if (props.type == 'inputText') {
+    if (props.type === 'inputText') {
         return (
             <div id="input-body">
                 <input
@@ -20,7 +20,7 @@ function GeneralInput(props) {
                 </div>
             </div>
         );
-    } else if (props.type == 'inputEditor') {
+    } else if (props.type === 'inputEditor') {
         return (
             <div id="input-body-editor">
                 <CKEditor

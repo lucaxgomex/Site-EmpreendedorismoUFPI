@@ -8,6 +8,8 @@ import OurTeam from '../../components/OurTeam';
 import Footer from '../../components/Footer'
 import AboutUsCard from '../../components/AboutUsCard';
 
+import './styles.css';
+
 function HomePage() {
   return (
     <div>

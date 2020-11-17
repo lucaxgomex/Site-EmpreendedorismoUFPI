@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from '../../configs/apiConfig';
+import * as Yup from 'yup';
 import { connect } from 'react-redux';
 
 import { store } from '../../store';
@@ -26,20 +27,33 @@ class CreateArticle extends React.Component {
     handleCKEditorState = (event, editor) => {
         const data = editor.getData();
         this.setState({ content: data})
-        console.log(this.state.content)
     }
 
     handleCreateArticleSubmit = async() => {
         const { dispatch } = this.props;
 
-        dispatch(Article(this.state));
-        alert("Artigo criado com sucesso!");
+        try {
+            const schema = Yup.object().shape({
+                title: Yup.string().required('É necessário digitar um título para o artigo.'),
+                content: Yup.string().required('O conteúdo do artigo não pode ser vazio.'),
+            });
+
+            await schema.validate(this.state, {
+                abortEarly: false,
+            });
+
+            dispatch(Article(this.state));
+            this.props.history.push('/article-preview');
+        } catch (err) {
+            err.errors.map(error => alert(error))
+        }
+
     }
 
     render() {
         return (
             <section id="create-news">
-                <HeaderDashboard />
+                <HeaderDashboard nameButton="Home"/>
                 <div id="create-news-body">
                     <div className="central create-article-central"> 
                         <GeneralInput
@@ -55,7 +69,7 @@ class CreateArticle extends React.Component {
                             onChange={this.handleCKEditorState}
                         />
                         
-                        <div className="buttons-create-news">
+                        <div className="buttons-create-article">
                             <ActionButton
                                 content="Cancelar" 
                                 color="red"

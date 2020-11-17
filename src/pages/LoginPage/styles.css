@@ -1,5 +1,5 @@
 #section-login {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
 
@@ -30,6 +30,13 @@
   
   background-color: #FAF8F8;
   border-radius: 10px;
+}
+
+#form-login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-login button {
