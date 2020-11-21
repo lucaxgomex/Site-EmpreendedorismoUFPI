@@ -23,7 +23,7 @@ export default function SocialMediaModal(props){
   }
  
     return (
-      <div>
+      <div id="div-modal" >
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -82,7 +82,7 @@ export default function SocialMediaModal(props){
                     </Link>
 
                     <Link id="social-media-link"
-                            to={{ pathname:""}}
+                            to={{ pathname:"https://twitter.com/empreendeufpi?s=11"}}
                             target="_blank"
                     >
                         <div id="logo">

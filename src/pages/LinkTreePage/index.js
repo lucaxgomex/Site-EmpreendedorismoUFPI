@@ -31,7 +31,7 @@ export default function LinkTreePage() {
 
                     <ButtonLink width={32} content={'Sobre a Liga'} link="/sobre" type="link" />
 
-                    <ButtonLink width={32} content={'Contatos'}  link="/contatos" type="link" />
+                    <ButtonLink width={32} content={'Contatos'}  link="/contato" type="link" />
 
                     <ButtonLink width={32} content={'Processo Seletivo'} link="/processo-seletivo" type="link" />
 
