@@ -1,6 +1,5 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Modal from 'react-modal';
-import styles from './modal.css';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
@@ -10,8 +9,35 @@ import twiterIcon from '../../../assets/icons/twiter-icon.png'
 import closeIcon from '../../../assets/icons/close-icon.png'
 
 Modal.setAppElement('#root');
+
 export default function SocialMediaModal(props){
+    const [width,setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [window.innerWidth])
+
+
+    const styles = {
+        content: {
+          backgroundColor: '#FAF8F8',
+          margin: '0',
+          padding: '10px 0',
+          borderRadius: '12px',
+          top                   : '50%',
+          left                  : '50%',
+          right                 : 'auto',
+          bottom                : 'auto',
+          marginRight           : '-50%',
+          transform             : 'translate(-50%, -50%)'
+        },
+        overlay: {
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        }
+      }
+
     const [modalIsOpen,setIsOpen] = [props.modalIsOpen,props.setIsOpen]
+
 
   function openModal() {
     setIsOpen(true);

@@ -4,6 +4,21 @@
 }
 
 
+
+@media only screen and (max-width: 568px){
+  .ReactModal__Content--after-open{
+     width: 85%;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .ReactModal__Content--after-open{
+    width: 30%;
+ }
+  
+}
+
+
 .ReactModal__Content--after-open .modal-container-block i {
   color: #000;
   display: block;
