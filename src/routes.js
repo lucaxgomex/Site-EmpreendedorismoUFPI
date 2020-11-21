@@ -18,6 +18,7 @@ import ArticlePreviewPage from './pages/ArticlePreviewPage';
 import ProfileEditPage from './pages/ProfileEditPage';
 import HomeUser from './pages/HomeUser';
 import PasswordChangePage from './pages/PasswordChangePage';
+import LinkTreePage  from './pages/LinkTreePage';
 
 export default function Routes() {
     return (
@@ -40,6 +41,7 @@ export default function Routes() {
                 <Route path='/error404' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
                 <Route path='/homeUser' component={HomeUser}/>
+                <Route path='/link-tree' component={LinkTreePage}/>
             </Switch>
         </BrowserRouter>
     )
