@@ -1,0 +1,141 @@
+.ReactModal__Content--after-open{
+  height: 48%;
+  inset: 20px;
+}
+
+
+.ReactModal__Content--after-open .modal-container-block i {
+  color: #000;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper h2 {
+  font-family: Poppins;
+  text-align: center;
+  padding: 30px 0;
+  max-width: 300px;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper .card {
+  width: 30%;
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: blue;
+  border-radius: 12px;
+}
+
+.ReactModal__Content--after-open .modal-container-block #container-input-formInput {
+  border: 2px solid #00183C !important;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper .buttons-modal {
+  width: 54%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ReactModal__Content--after-open .modal-container-wrapper .buttons-modal button#action-button {
+  padding: 4px 30px;
+}
+
+#modal{
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#div-close{
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px;
+}
+
+
+#div-tittle{
+  display: flex;
+  justify-content: center;
+}
+
+#div-social-media-links{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center ;
+}
+
+#social-media-link{
+  display: flex;
+  height: 55px;
+  width: 350px;
+  background: #ECECEC;
+  margin: 10px;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+#social-media-link #logo{
+  position: absolute;
+  left: 15px;
+  top: 58%;
+  transform: translateY(-50%);
+
+}
+
+
+
+#div-tittle span {
+  color: #00183C;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600 ;
+  font-size: 1.9rem;
+  padding: 4px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+
+#div-social-media-links  #social-media-link {
+  display: flex;
+  height: 7vh;
+  background-color: #ECECEC    ;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+
+  color: #313A8A;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  box-shadow: 0px 3px rgba(000, 000, 000, 0.2);
+}
+
+
+#div-social-media-links  #social-media-link {
+  transition: box-shadow 0.3s;
+}
+
+#div-social-media-links  #social-media-link:hover {
+  box-shadow: 0px 2px 2px 2px rgba(000, 000, 000, 0.2);
+}

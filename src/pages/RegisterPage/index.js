@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { Form } from '@unform/web';
-import axios from '../../configs/apiConfig';
-import { useHistory } from "react-router-dom";
 import * as Yup from 'yup';
+import { useHistory } from "react-router-dom";
+
+import submitForm from '../../services/registerService';
 
 import Header from '../../components/Header';
 import Button from '../../components/Atoms/Button';
@@ -17,6 +18,7 @@ import './styles.css';
 
 function RegisterPage() {
   const history = useHistory();
+  const formRef = useRef(null);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,6 +27,8 @@ function RegisterPage() {
   const [phone, setPhone] = useState('');
   const [course, setCourse] = useState('');
   const [occupation, setOccupation] = useState('');
+
+  const [secondFormData, setSecondFormData]  = useState({});
 
   function changeForm() {
     const first_form = document.getElementById('first-form');
@@ -48,9 +52,86 @@ function RegisterPage() {
     second_form.style.display = 'none';
   }
 
-  async function handleSubmitForm(secondFormdata) {
-    const { email, password } = secondFormdata;
+  // async function handleSubmitForm(secondFormdata) {
+  //   const { email, password } = secondFormdata;
 
+  //   const data = {
+      // name,
+      // email,
+      // password,
+      // date_of_birth,
+      // phone,
+      // course,
+      // occupation
+  //   }
+
+  //   const today = new Date();
+
+  //   try {
+  //     const schema = Yup.object().shape({
+  //       name: Yup.string().required('O nome é obrigatório'),
+  //       email: Yup.string()
+  //                 .email('Digite um e-mail válido')
+  //                 .required('O e-mail é obrigatório'),
+  //       phone: Yup.string().required('Número de telefone é obrigatório'),
+  //       password: Yup.string()
+  //                     .min(8, 'A senha deve ter no mínimo 8 caracteres')
+  //                     .required('A senha é obrigatória'),
+  //       date_of_birth: Yup.date().max(today).typeError('Você não preencheu o campo \'Data de Nascimento\' corretamente'),
+  //       course: Yup.string(),
+  //       occupation: Yup.string(),
+
+        
+  //     });
+      
+  //     await schema.validate(data, {
+  //       abortEarly: false,
+  //     });
+      
+      // await axios.post('auth/register', {
+      //   name,
+      //   email,
+      //   password,
+      //   date_of_birth,
+      //   phone,
+      //   course,
+      //   occupation,
+      //   "is_superuser": false,
+      //   "is_active": true,
+      //   "user_type": "1"
+      // });
+
+      // hideForm()
+
+      // render(
+      //   <div className="succesfuly-signin">
+      //     <img src={Succesfuly} alt="success" />
+      //     <span className="succesfuly-message">Cadastrado realizado com sucesso!</span>
+      //   </div>
+      // )
+       
+      // setTimeout(() => (cleanup(), history.push('/login')), 3000);
+
+  //   } catch(err) {
+      // if (err instanceof Yup.ValidationError) {
+      //   const listErrors = err.errors
+
+      //   render(
+      //     <div className="error-message-container">
+      //       {listErrors.map(messageError => <div className="error-message">{messageError}</div>)}
+      //     </div>
+      //   ) 
+      // }
+
+      // const messages = document.getElementsByClassName('error-message');
+      
+      // setTimeout(() => Object.values(messages)
+      //                       .forEach((message) => message.style.display="none"), 3600);
+      // }
+  // }
+
+
+  async function handleSubmitForm() {
     const data = {
       name,
       email,
@@ -60,42 +141,29 @@ function RegisterPage() {
       course,
       occupation
     }
-
-    const today = new Date();
-
+    
     try {
+      const today = new Date();
+
       const schema = Yup.object().shape({
         name: Yup.string().required('O nome é obrigatório'),
         email: Yup.string()
                   .email('Digite um e-mail válido')
                   .required('O e-mail é obrigatório'),
-        phone: Yup.string().required('Número de telefone é obrigatório'),
+        phone: Yup.string().required('O número de telefone é obrigatório.'),
         password: Yup.string()
                       .min(8, 'A senha deve ter no mínimo 8 caracteres')
                       .required('A senha é obrigatória'),
         date_of_birth: Yup.date().max(today).typeError('Você não preencheu o campo \'Data de Nascimento\' corretamente'),
         course: Yup.string(),
         occupation: Yup.string(),
-
-        
       });
-      
+  
       await schema.validate(data, {
         abortEarly: false,
       });
-      
-      await axios.post('auth/register', {
-        name,
-        email,
-        password,
-        date_of_birth,
-        phone,
-        course,
-        occupation,
-        "is_superuser": false,
-        "is_active": true,
-        "user_type": "1"
-      });
+
+      submitForm(data);
 
       hideForm()
 
@@ -108,13 +176,13 @@ function RegisterPage() {
        
       setTimeout(() => (cleanup(), history.push('/login')), 3000);
 
-    } catch(err) {
+    } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const listErrors = err.errors
 
         render(
           <div className="error-message-container">
-            {listErrors.map(messageError => <div className="error-message">{messageError}</div>)}
+            {listErrors.map(messageError => <div key={messageError} className="error-message">{messageError}</div>)}
           </div>
         ) 
       }
@@ -123,9 +191,8 @@ function RegisterPage() {
       
       setTimeout(() => Object.values(messages)
                             .forEach((message) => message.style.display="none"), 3600);
-      }
+    }
   }
-
 
   
   return (
@@ -201,6 +268,7 @@ function RegisterPage() {
           <Form
             id="second-form"
             className="form-signin"
+            ref={formRef}
             onSubmit={handleSubmitForm}
           >
             <div className="title-form">

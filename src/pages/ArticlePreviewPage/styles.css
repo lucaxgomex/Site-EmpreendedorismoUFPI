@@ -1,0 +1,107 @@
+section#article-page {
+  width: 100%;
+  height: 100%;
+
+  background-color: #E5E5E5;
+}
+
+section#article-page #container-article {
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px 0;
+  height: 100%;
+}
+
+#content-article {
+  position: absolute;
+}
+
+#content-article #container-icons {
+  width: 10%;
+  height: 100%;
+
+  background-color: #000;
+  top: 0;
+  left: 0;
+}
+
+#container-icons .article-icons {
+  position: relative;
+  top: 70%;
+  left: 10%;
+  width: 40px;
+  height: 120px;
+  background: red;
+}
+
+
+#container-article #title-article h1{
+  font-family: Poppins;
+  font-size: 48px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#container-article #title-article .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-article #title-article .user-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#container-article #title-article .user-info span {
+  padding-left: 14px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+#container-article #content-article-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  text-align: justify;
+}
+
+#container-article #content-article-wrapper .article-bg{
+  width: 100%;
+  height: 300px;
+  margin: 40px 0;
+
+  background-image: url('../../imgs/backgroundTest.jpg');
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#container-article #content-article-wrapper h1,
+#container-article #content-article-wrapper p,
+#container-article #content-article-wrapper ul li {
+  font-family: Poppins;
+  color: #000;
+}
+
+#container-article #content-article-wrapper p {
+  font-size: 20px;
+  font-weight: normal;
+
+}
+
+#container-article #content-article-wrapper ul li {
+  font-size: 23px;
+  padding-bottom: 18px;
+}
+
+#container-article .buttons-confirm-creation {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 20px;
+}
+
+#container-article .buttons-confirm-creation button {
+  margin-left: 20px;
+}

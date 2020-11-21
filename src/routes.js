@@ -14,7 +14,10 @@ import UserPanel from './pages/UserPanel';
 import CreateArticle from './pages/CreateArticle';
 import Error404 from './pages/Error404';
 import CreateNews from './pages/CreateNews';
-import ArticlePage from './pages/ArticlePage';
+import ArticlePreviewPage from './pages/ArticlePreviewPage';
+import ProfileEditPage from './pages/ProfileEditPage';
+import HomeUser from './pages/HomeUser';
+import PasswordChangePage from './pages/PasswordChangePage';
 import LinkTreePage  from './pages/LinkTreePage';
 
 export default function Routes() {
@@ -31,10 +34,13 @@ export default function Routes() {
                 <Route path='/cadastro' component={RegisterPage}/>
                 <Route path='/admin' component={AdminPanel}/>
                 <Route path='/usuario' component={UserPanel}/>
+                <Route path='/editar-perfil' component={ProfileEditPage}/>
+                <Route path='/alterar-senha' component={PasswordChangePage}/>
                 <Route path='/create-article' component={CreateArticle}/>
+                <Route path='/article-preview' component={ArticlePreviewPage}/>
                 <Route path='/error404' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
-                <Route path='/article' component={ArticlePage}/>
+                <Route path='/homeUser' component={HomeUser}/>
                 <Route path='/link-tree' component={LinkTreePage}/>
             </Switch>
         </BrowserRouter>

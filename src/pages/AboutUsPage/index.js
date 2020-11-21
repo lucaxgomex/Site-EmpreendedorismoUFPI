@@ -31,19 +31,19 @@ function AboutUsPage() {
             é justamente a falta de conhecimento e orientação. Assim, o projeto nasceu motivado a fazer um trabalho de prospecção de mais pessoas físicas usando a educação como
             ferramenta.</p>
         </TextCard>
-        <img src={logo} className="logo-about-liga"/>
+        <img src={logo} alt="logo-liga" className="logo-about-liga"/>
       </div>
 
       <div className="section-a-liga" >
         <div id="second-part-section-a-liga">
 
           <div id="first-img-equipe">
-            <img src={equipeLiga} />
+            <img src={equipeLiga} alt="equipe"/>
             <h4>Reunião para o desafio Constellation Challenge 2020</h4>
           </div>
 
           <div id="second-img-premio">
-            <img src={premio}/>
+            <img src={premio} alt="premio"/>
             <h4>Participação no 12º CFA Research Challenge</h4>
           </div>
         </div>

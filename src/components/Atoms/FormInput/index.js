@@ -75,4 +75,4 @@ function FormInput (props) {
     }
 }
 
-export default FormInput
+export default FormInput;

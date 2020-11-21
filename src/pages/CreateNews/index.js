@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from '../../configs/apiConfig';
 import { connect } from 'react-redux';
+import * as Yup from 'yup';
+
+import { News } from '../../store/reducers/news/actions';
 
 import HeaderDashboard from '../../components/HeaderDashboard';
 import GeneralInput from '../../components/Atoms/Generalnput';
@@ -16,8 +19,33 @@ class CreateNews extends React.Component {
         this.state = {
             title: '',
             subtitle: '',
-            content: ''
+            content: '',
+            redirect: true,
         }
+    }
+
+
+    handleCreateNewsSubmit = async() => {
+        const { dispatch } = this.props;
+
+        try {
+
+            const schema = Yup.object().shape({
+                title: Yup.string().required('É necessário digitar um título para a notícia.'),
+                subtitle: Yup.string().required('É necessário digitar um subtítulo para a notícia.'),
+                content: Yup.string().required('O conteúdo da notícia não pode ser vazio.'),
+            });
+
+            await schema.validate(this.state, {
+                abortEarly: false,
+            });
+
+            dispatch(News(this.state));
+            alert("Notícia criada com sucesso!");
+        } catch (err) {
+            err.errors.map(error => alert(error))
+        }
+
     }
 
     handleCKEditorState = (event, editor) => {
@@ -28,7 +56,7 @@ class CreateNews extends React.Component {
     render() {
         return (
             <section id="create-news">
-                <HeaderDashboard />
+                <HeaderDashboard nameButton="Home"/>
                 <div id="create-news-body">
                     <div className="central"> 
                         <GeneralInput
@@ -51,8 +79,15 @@ class CreateNews extends React.Component {
                         />
                         
                         <div className="buttons-create-news">
-                            <ActionButton content="Cancelar" color="red" className="action-button"/>
-                            <ActionButton content="Enviar" color="blue" className="action-button"/>
+                            <ActionButton
+                                content="Cancelar"
+                                color="red" className="action-button"
+                            />
+                            <ActionButton
+                                content="Enviar"
+                                color="blue" className="action-button"
+                                onClick={this.handleCreateNewsSubmit}
+                            />
                         </div>
                     </div>
                 </div>
