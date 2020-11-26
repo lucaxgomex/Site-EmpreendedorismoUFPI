@@ -9,8 +9,11 @@ import equipeLiga from '../../imgs/equipe-liga.png';
 import premio from '../../imgs/premio.png';
 import notebook from '../../imgs/notebook.png';
 import instagram from '../../imgs/instagram.png';
+import chefe from '../../imgs/chefe.png';
+import rightArrow from '../../imgs/icons/right-arrow.png';
 
 import './styles.css';
+import ConselhoCard from '../../components/ConselhoCard';
 
 function AboutUsPage() {
   return (
@@ -97,6 +100,22 @@ function AboutUsPage() {
         </div>
       </div>
       <TitleSection title="O CONSELHO"/>
+      <div id="conselho-card-area">
+          <ConselhoCard >
+            <img src={chefe} className="image-profile"/>
+                <div className="text-conselho-card">
+                    <h1> André Oliveira - CIO </h1>
+                    <p>
+                        Chief Information Officer, Full stack developer
+                        responsável pelo desenvolvimento de sistemas e ferramentas para a Liga.
+                    </p>
+                    <h2> andreluisoliveira013@gmail.com </h2>
+                </div>
+                <button>
+                    <img src={rightArrow} />
+                </button>
+          </ConselhoCard>
+      </div>
       <TitleSection title="O QUE ESPERAR?"/>
       <div id="o-que-esperar">
         <TextCard>
