@@ -7,6 +7,8 @@ import TextCard from '../../components/TextCard';
 import logo from '../../imgs/logo.png';
 import equipeLiga from '../../imgs/equipe-liga.png';
 import premio from '../../imgs/premio.png';
+import notebook from '../../imgs/notebook.png';
+import instagram from '../../imgs/instagram.png';
 
 import './styles.css';
 
@@ -72,8 +74,52 @@ function AboutUsPage() {
       </div>
 
       <TitleSection title="INSTAGRAM E NEWSLETTER"/>
+      <div id="instagram-newsletter">
+        <img src={instagram} />
+        <div className="text-area">
+        <p>
+          O instagram hoje representa o maior meio de alcance da liga, 
+          grande parte do público reconhece o trabalho através dessa ferramenta. 
+          Dentro da página, dispõem diferentes canais interativos com o intuito de atrair tanto o público mais leigo 
+          quanto o mais avançado. Fazem parte hoje os quadros de Explicando, CineLiga e o DailyNews. 
+          Além disso, existe o plano para lançamento de MorningCalls todas as manhãs atraves do IGTV, 
+          com o intuito de informar o seguidor das noticias mais relevantes para o mercado naquele dia. 
+          Todo o processo de elaboração de conteúdo, desenvolvimento das artes e execução da postagens é feito por 
+          membros da própria liga, que dispõem do seu tempo estudando design e marketing.
+        </p>
+        <p>
+          O newsletter funciona como um boletim
+          informativo completo, com curadoria de notícias e algumas teses que podem orientar o
+          investidor nas suas decisões diárias.
+          O intuito é que ele tenha autonomia para tomar suas decisões de investimentos 
+          filtrando as notícias mais relevantes para o mercado naquele período.
+        </p>
+        </div>
+      </div>
       <TitleSection title="O CONSELHO"/>
-      <TitleSection title="O QUE ESPERAR"/>
+      <TitleSection title="O QUE ESPERAR?"/>
+      <div id="o-que-esperar">
+        <TextCard>
+          <p>
+            O que se espera do projeto é que ele extrapole os limites universitários. Sabemos que ao redor do planeta inúmeras empresas e Start Ups nascem no seio das
+            universidades através de seus principais projetos de extensão, que servem de
+            estímulo para inovar e criar soluções para diversos problemas sociais.
+          </p>
+          <p>
+            Somos pioneiros na Universidade e no Piauí. Transformar a realidade do estado,
+            resolver problemas relacionados à vida financeira do País e criar riqueza é o nosso
+            propósito maior.
+          </p>
+          <p className="finalP">
+            O que hoje é um projeto de extensão que almeja virar um Clube de Investimentos,
+            posteriormente se tornará uma gestora que administra fundos de sucesso e de
+            referência nacional e que consiga transformar vidas e a realidade local gerando
+            emprego, mais renda, mais oportunidades de crescimento patrimonial ao acesso do
+            maior número de pessoas possível.
+          </p> 
+        </TextCard>
+        <img src={notebook} />
+      </div>
       <Footer/>
     </div>
   );

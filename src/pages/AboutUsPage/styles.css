@@ -52,3 +52,23 @@ h4 {
     color: #FAF8F8;
 
 }
+
+#instagram-newsletter {
+    display: flex;
+    align-items: flex-start;
+    margin: 0px 60px 0px 10px;
+}
+
+#instagram-newsletter .text-area {
+    margin-top: 10px;
+}
+
+#o-que-esperar {
+    display: flex;
+    margin: 0px 70px 250px 70px;
+}
+
+#o-que-esperar img{
+    width: 570px;
+    height: 493px;
+}

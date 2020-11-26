@@ -6,7 +6,7 @@ import './styles.css';
 
 function Error404 () {
     return (
-        <div>
+        <div id="error-page-geral">
             <HeaderDashboard nameButton="Home"/>
             <div id="body-error-page">
                 <img src={avisoImg} alt="warning"/>

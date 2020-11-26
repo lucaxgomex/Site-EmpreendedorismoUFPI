@@ -38,7 +38,7 @@ export default function Routes() {
                 <Route path='/alterar-senha' component={PasswordChangePage}/>
                 <Route path='/create-article' component={CreateArticle}/>
                 <Route path='/article-preview' component={ArticlePreviewPage}/>
-                <Route path='/error404' component={Error404}/>
+                <Route path='*' component={Error404}/>
                 <Route path='/news' component={CreateNews}/>
                 <Route path='/homeUser' component={HomeUser}/>
                 <Route path='/link-tree' component={LinkTreePage}/>
