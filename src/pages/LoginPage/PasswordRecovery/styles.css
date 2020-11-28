@@ -157,3 +157,43 @@ span.text-password-recovery {
   top: 40px;
   left: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  div.recovery-password {
+    background: url('../../../assets/img/mobile-background.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-recovery-password {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-form-password-recovery {
+    width: 90vw;
+    position: relative;
+  }
+
+  .form-password-recovery {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+  }
+
+  .recovery-text {
+    max-width: 80%;
+  }
+
+  .recovery-text p {
+    padding-top: 8px;
+    text-align: center;
+  }
+
+  .logo-liga {
+    margin-left: 10px;
+  }
+}

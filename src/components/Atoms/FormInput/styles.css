@@ -7,7 +7,6 @@
 
 #container-flag-formInput {
     display: flex;
-    height: 4vh;
     background-color: #FBC531;
     justify-content: center;
     align-items: center;
@@ -23,10 +22,14 @@
     font-size: 14px;
 }
 
+#container-flag-formInput span {
+    padding: 2px 6px;
+}
+
 #container-input-formInput {
     display: flex;
-    width: 99%;
-    height: 6vh;
+    width: 100%;
+    padding: 2px;
     justify-content: center;
     background-color: #fff;
     z-index: 0;
@@ -36,8 +39,9 @@
 }
 
 #input-formInput {
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    margin: 0 5px 5px 5px;
+    padding: 0px 0px 0px 3px;
     border-style: none;
     border-style: none;
     outline: none;
@@ -59,4 +63,8 @@
     background-repeat: no-repeat, repeat;
     background-size: contain;
     margin-right: 10px;
+}
+
+#container-input-formInput input[type=date] {
+    width: 260px;
 }

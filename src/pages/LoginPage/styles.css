@@ -72,7 +72,7 @@
 }
 
 .logo-liga-login img {
-  width: 80%;
+  width: 38%;
   position: relative;
   top: 24%;
   left: 38%;
@@ -89,7 +89,7 @@
 }
 
 .create-account-wrapper {
-  width: 74%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -97,15 +97,78 @@
 
 .create-account-wrapper span {
   text-align: center;
-  line-height: 80px;
 
   font-size: 12px;
   font-weight: medium;
   font-family: Poppins;
 }
 
+.create-account-wrapper #container-main-button {
+  padding: 8px 16px;
+}
+
 .create-account-wrapper #container-main-button > span {
   font-size: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  #section-login {
+    background-image: url('../../assets/img/mobile-background.png');
+    background-position: center;
+    background-size: 100% 100%;
 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-liga-login {
+    width: 80%;
+    height: 30%;
+
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+
+  #container-form-login {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    padding-top: 20%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  #form-login {
+    width: 80vw;
+    padding: 12px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #FAF8F8;
+    border-radius: 10px;
+  }
+
+  .create-account-wrapper {
+    position: absolute;
+    bottom: 8px;
+
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .create-account-wrapper > span {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .create-account-wrapper #container-main-button > span {
+    font-size: 12px;
+  }
+}

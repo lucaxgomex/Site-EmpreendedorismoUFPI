@@ -52,84 +52,6 @@ function RegisterPage() {
     second_form.style.display = 'none';
   }
 
-  // async function handleSubmitForm(secondFormdata) {
-  //   const { email, password } = secondFormdata;
-
-  //   const data = {
-      // name,
-      // email,
-      // password,
-      // date_of_birth,
-      // phone,
-      // course,
-      // occupation
-  //   }
-
-  //   const today = new Date();
-
-  //   try {
-  //     const schema = Yup.object().shape({
-  //       name: Yup.string().required('O nome é obrigatório'),
-  //       email: Yup.string()
-  //                 .email('Digite um e-mail válido')
-  //                 .required('O e-mail é obrigatório'),
-  //       phone: Yup.string().required('Número de telefone é obrigatório'),
-  //       password: Yup.string()
-  //                     .min(8, 'A senha deve ter no mínimo 8 caracteres')
-  //                     .required('A senha é obrigatória'),
-  //       date_of_birth: Yup.date().max(today).typeError('Você não preencheu o campo \'Data de Nascimento\' corretamente'),
-  //       course: Yup.string(),
-  //       occupation: Yup.string(),
-
-        
-  //     });
-      
-  //     await schema.validate(data, {
-  //       abortEarly: false,
-  //     });
-      
-      // await axios.post('auth/register', {
-      //   name,
-      //   email,
-      //   password,
-      //   date_of_birth,
-      //   phone,
-      //   course,
-      //   occupation,
-      //   "is_superuser": false,
-      //   "is_active": true,
-      //   "user_type": "1"
-      // });
-
-      // hideForm()
-
-      // render(
-      //   <div className="succesfuly-signin">
-      //     <img src={Succesfuly} alt="success" />
-      //     <span className="succesfuly-message">Cadastrado realizado com sucesso!</span>
-      //   </div>
-      // )
-       
-      // setTimeout(() => (cleanup(), history.push('/login')), 3000);
-
-  //   } catch(err) {
-      // if (err instanceof Yup.ValidationError) {
-      //   const listErrors = err.errors
-
-      //   render(
-      //     <div className="error-message-container">
-      //       {listErrors.map(messageError => <div className="error-message">{messageError}</div>)}
-      //     </div>
-      //   ) 
-      // }
-
-      // const messages = document.getElementsByClassName('error-message');
-      
-      // setTimeout(() => Object.values(messages)
-      //                       .forEach((message) => message.style.display="none"), 3600);
-      // }
-  // }
-
 
   async function handleSubmitForm() {
     const data = {
@@ -210,9 +132,7 @@ function RegisterPage() {
             <span className="text-signin">Cadastre-se</span>
 
             <FormInput 
-              name="name"
-              width={22} 
-              widthFlag={28}
+              name="name" 
               title={"Nome Completo"} 
               required={true}
               placeHolder={'Seu nome...'}
@@ -222,9 +142,7 @@ function RegisterPage() {
             
             <FormInput 
               name="date"
-              title={"Data de Nascimento"} 
-              width={22} 
-              widthFlag={34} 
+              title={"Data de Nascimento"}   
               required={true}
               type="date"
               value={date_of_birth}
@@ -233,9 +151,7 @@ function RegisterPage() {
             
             <FormInput 
               name="phone"
-              title={"Celular"} 
-              width={22}
-              widthFlag={14} 
+              title={"Celular"}  
               required={true}
               placeHolder={'(00)00000-0000...'}
               value={phone}
@@ -245,8 +161,6 @@ function RegisterPage() {
             <FormInput
               name="course"
               title={"Curso"}
-              width={22}
-              widthFlag={12}
               placeHolder={'Seu curso...'}
               value={course}
               onChange={(e) => { setCourse(e.target.value) }}  
@@ -254,9 +168,7 @@ function RegisterPage() {
 
             <FormInput
               name="job"
-              title={"Emprego"} 
-              width={22} 
-              widthFlag={16}
+              title={"Emprego"}  
               placeHolder={'Seu emprego...'}
               value={occupation}
               onChange={(e) => { setOccupation(e.target.value) }}
@@ -281,9 +193,7 @@ function RegisterPage() {
             <FormInput
               name="email"
               title={"E-mail"} 
-              type={"email"} 
-              width={22} 
-              widthFlag={14} 
+              type={"email"}   
               required={true} 
               placeHolder={'Seu e-mail...'}
               value={email}
@@ -294,8 +204,6 @@ function RegisterPage() {
               name="password"
               title={"Senha"}
               type={"password"}
-              width={22}
-              widthFlag={14}
               required={true}
               placeHolder={'Sua senha...'}
               value={password}
