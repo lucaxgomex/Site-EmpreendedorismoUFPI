@@ -42,8 +42,6 @@ class LoginPage extends React.Component {
               >
                 <FormInput
                   name="email"
-                  width={20}
-                  widthFlag={12}
                   title={'E-mail'}
                   placeHolder={'seuemail@com.br'}
                   required={true} 
@@ -54,8 +52,6 @@ class LoginPage extends React.Component {
 
                 <FormInput
                   name="password"
-                  width={20}
-                  widthFlag={12}
                   title={'Senha'}
                   value={this.state.password}
                   placeHolder={'*****'}
@@ -75,7 +71,7 @@ class LoginPage extends React.Component {
 
               <div className="create-account-wrapper">
                 <span>Você ainda não tem sua conta?</span>
-                <Button width={6} content={'Cadastre-se'} />
+                <Button type="link" to="/cadastro" content={'Cadastre-se'} onClick=""/>
               </div>
             </div>
           </div>

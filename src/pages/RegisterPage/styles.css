@@ -10,6 +10,7 @@ div.signin {
 .section-signin {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 
 .succesfuly-signin {
@@ -83,6 +84,8 @@ div.signin {
   align-items: center;
   z-index: 2;
   font-family: Poppins;
+
+  position: relative;
 }
 
 .form-signin {
@@ -144,4 +147,60 @@ span.text-signin {
   padding-top: 10px;
   text-align: center;
   color: #00183C;
+}
+
+@media screen and (max-width: 768px) {
+  div.signin {
+    background: url('../../assets/img/mobile-background.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-signin {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-form-signin {
+    width: 90vw;
+    position: relative;
+  }
+
+  .form-signin {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+  }
+
+  .logo-liga {
+    width: 80%;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+
+  .succesfuly-signin {
+    width: 80%;
+    right: 40px;
+    top: 40%;
+  }
+
+  .succesfuly-signin img {
+    height: 70px;
+  }
+
+  .succesfuly-signin span { 
+    font-size: 20px;
+  }
+
+  .title-form {
+    padding-top: 10px;
+  }
+
+  .title-form span.text-signin{
+    font-size: 30px;
+  }
+
 }

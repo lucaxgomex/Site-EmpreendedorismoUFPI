@@ -14,23 +14,15 @@ function FormInput (props) {
         })
     }, [fieldName, registerField]);
 
-    const style = {
-        width: props.width + 'vw',
-        
-    }
-    const styleFlag = {
-        width: (props.widthFlag / 3) + 'vw'
-    }
-
     const styleInput = {
         border: '#000 1px solid'
     }
 
     if (props.required) {
         return (
-            <div id="container-main-formInput" style={style}>
+            <div id="container-main-formInput">
                 <div id="line-flags">
-                    <div id="container-flag-formInput" style={styleFlag}>
+                    <div id="container-flag-formInput">
                         <span>{props.title}</span>
                     </div>
 
@@ -41,7 +33,7 @@ function FormInput (props) {
                 <div id="container-input-formInput" style={styleInput}>
                     <input 
                         id="input-formInput" 
-                        type={props.type} 
+                        type={props.type}
                         placeholder={props.placeHolder}
                         ref={inputRef}
                         value={props.value}
@@ -54,9 +46,11 @@ function FormInput (props) {
     }
     else {
         return (
-            <div id="container-main-formInput" style={style}>
-                <div id="container-flag-formInput" style={styleFlag}>
-                    <span>{props.title}</span>
+            <div id="container-main-formInput">
+                <div id="line-flags">
+                    <div id="container-flag-formInput">
+                        <span>{props.title}</span>
+                    </div>
                 </div>
                 <div id="container-input-formInput" style={styleInput}>
                     <input

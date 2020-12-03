@@ -1,0 +1,68 @@
+#div-link-tree {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+      
+    background-image: url('../../assets/img/background-link-tree.png');
+    background-size: 100% 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+
+    justify-content: center;
+  }
+
+
+  
+#container-link-tree {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.20);
+    justify-content: center;
+    align-items: center;
+}
+
+#div-ig {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+#logo-liga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+#logo-liga img  {
+  margin: 0;
+  height:35vh;
+
+}
+
+#text-ig {
+    color: #00183C;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600 ;
+    font-size: 1.9rem;
+    padding: 4px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+
+#div-button-links {
+    display: flex;
+    flex-direction: column ;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  
+  
