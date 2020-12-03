@@ -195,4 +195,12 @@ span.text-signin {
     font-size: 20px;
   }
 
+  .title-form {
+    padding-top: 10px;
+  }
+
+  .title-form span.text-signin{
+    font-size: 30px;
+  }
+
 }

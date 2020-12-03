@@ -2,7 +2,9 @@ import axios from 'axios';
 import { store } from '../store';
 require('dotenv').config();
 
-axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://${url_da_api}';
+const url_da_api = 'empreendedorismoufpi.com.br/api';
+
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : `http://${url_da_api}`;
 
 axios.interceptors.request.use(
   request => {
