@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Form } from '@unform/web';
-
+import CryptoJS from 'crypto-js';
 import loginService from '../../services/loginService';
 
 import Header from '../../components/Header';
@@ -11,6 +11,8 @@ import FormInput from '../../components/Atoms/FormInput';
 import LogoLiga from '../../imgs/logo-azul.png';
 
 import './styles.css';
+
+import BLC from '../../services/BCL-v1.0/main'
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -21,7 +23,17 @@ class LoginPage extends React.Component {
     }
   }
 
-  login = () => {
+
+  login = async () => {
+    let array = JSON.stringify(['/x0053', '/x8732', '/x7833', '/x875656', '/x73382', '/x78323',
+    '/x83274', '/x838263', '/x98323', '/x93823']);
+
+    let arrayCripto = CryptoJS.AES.encrypt(array, 'TESTE').toString();
+
+    let clientKey = await BLC.init(arrayCripto);
+
+    let serverKey = BLC.changeKeys(clientKey);
+
     const data = this.state;
     const { dispatch } = this.props;
 
