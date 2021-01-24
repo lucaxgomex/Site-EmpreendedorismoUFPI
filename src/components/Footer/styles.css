@@ -160,25 +160,32 @@
 }
 
 @media (max-width: 768px) {
-    #section-footer {
-        /*display: flex;*/
+    #section-footer {   
         width: 100vh;
-        /*
         font-size: 12px;
-        display: flex;
-        position: absolute;
-        flex-direction: row;
-        */
     }
-/*
-    #container-redes {
-        width: 150%;
-        margin-bottom: 100px;
+
+    #container-redes-text {
+        /*display: inline-block;*/
+        white-space: nowrap;
+        position: relative;
+        margin-left: 100px;
+    }
+
+    .container-redes-item-text {
+        display: inline-block; ;
+        white-space: nowrap;
+        margin-left: 50px;   
     }
 
     #container-contato {
-        margin: 0 auto;
+        margin: 20px;
         width: 50%;
     }
-    */
+
+    #icon-container-redes-item-phone,
+    #icon-container-redes-item-twitter,
+    #icon-container-redes-item-instagram {
+        position: fixed;
+    }
 }
