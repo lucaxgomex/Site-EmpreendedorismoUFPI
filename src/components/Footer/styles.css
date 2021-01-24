@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-#container-redes-item {
+.container-redes-item {
     display: flex;
     width: 30vw;
     height: 6vh;
@@ -69,7 +69,7 @@
     font-size: 24px;
 }
 
-#container-redes-item-text {
+.container-redes-item-text {
     color: #fff;
     text-decoration: none;
     font-family: Poppins;
@@ -118,7 +118,7 @@
     border-radius: 10px;
 }
 
-#input{
+.input{
     width: 100%;
     height: 100%;
     border-style: none;
@@ -157,4 +157,28 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    #section-footer {
+        /*display: flex;*/
+        width: 100vh;
+        /*
+        font-size: 12px;
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        */
+    }
+/*
+    #container-redes {
+        width: 150%;
+        margin-bottom: 100px;
+    }
+
+    #container-contato {
+        margin: 0 auto;
+        width: 50%;
+    }
+    */
 }
